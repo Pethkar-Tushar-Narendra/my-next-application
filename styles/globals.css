@@ -83,19 +83,19 @@ body {
   color: #ffffff; /* White color */
 }
 
-.focus:outline-none:focus {
+.focus:outline-none::focus {
   outline: none;
 }
 
-.focus:ring-2:focus {
+.focus:ring-2::focus {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); /* White ring around the element */
 }
 
-.focus:ring-inset:focus {
+.focus:ring-inset::focus {
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5); /* White ring inside the element */
 }
 
-.focus:ring-white:focus {
+.focus:ring-white::focus {
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5); /* White ring inside the element */
 }
 
@@ -412,6 +412,38 @@ input:focus {
   border-top-width: 2px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.h-8 {
+  height: 2rem; /* 32px */
+}
+
+.w-auto {
+  width: auto;
+}
+
+.space-x-4 > *:not([hidden]) ~ :not([hidden]) {
+  margin-left: 1rem; /* 16px */
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
 /*  */
 @media (min-width: 640px) {
   .sm:px-6 {
@@ -420,6 +452,18 @@ input:focus {
   }
   .sm:hidden {
     display: none;
+  }
+  .sm:items-stretch {
+    align-items: stretch; /* Flex items will stretch to fill the container height */
+  }
+  .sm:justify-start {
+    justify-content: flex-start;
+  }
+  .sm:ml-6 {
+    margin-left: 1.5rem; /* 24px */
+  }
+  .sm:block {
+    display: block;
   }
 }
 

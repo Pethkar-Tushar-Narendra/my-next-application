@@ -9,7 +9,6 @@ export default function Document() {
           rel="stylesheet"
         />
       </head>
-
       <Head />
       <body>
         <NavBar />
